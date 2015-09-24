@@ -1,0 +1,35 @@
+<div id="coverPic">
+  <p class="bfQuote">
+    "Tell me and I forget.</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Teach me and I remember."</br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <span id="bfSign"> Benjamin Franklin </span>
+  </p>
+</div>
+
+<h1 class='title' style="display:inline-block; width: 130px;">Teach<span class='logoM'>M</span>e:</h1>
+
+<div style="display:inline-block; width:230px; height:20px; vertical-align:top; margin-top: 14px">
+    <%= form_tag("/posts/search", method: "get") do %>
+      <%= text_field_tag :query,nil, :placeholder => "enter subject / location", :style => "height:27px; width: 150px; text-align:center;" %>
+      <%= image_submit_tag("Search.png", :name => 'filter', :style => "width:28px; vertical-align: top;") %>
+    <% end %>
+</div>
+
+<p style="font-weight:bold; font-size:22px; margin-top:30px;">Search Results for "<%= @query %>":</p>
+
+<div class ='container'>
+  <% unless @match.any? %>
+    <p style="margin: 20px auto; min-height:80px;"> No listings match the search parameters</p>
+  <% end %>
+
+  <% @match.each do |p|%>
+    <a href="/posts/<%= p %>">
+    <div class="indexListing">
+        <div class="indexImage" style="background-image: url('<%= Post.find(p).profile_url %>'); background-size: cover; background-repeat: no-repeat;">
+
+        </div>
+        <h6> <%=Post.find(p).title.capitalize%> </h6>
+        <p> With tutor: <%= Post.find(p).user.first_name%> </p>
+    </div>
+    </a>
+  <% end %>
+
+</div>

@@ -1,0 +1,32 @@
+<div class="container message">
+
+<h1 class='title'><span class='regularFont'>Sign up with </span>Teach<span class='logoM'>M</span>e!</h1>
+
+<%= form_for @user do |f| %>
+
+      <div class='messageLine signup first'>
+        <p class='messageDetail signup'>First Name: </p>
+        <%= f.text_field :first_name, :required => true, :class => 'messageField'%>
+      </div>
+
+      <div class='messageLine signup'>
+        <p class='messageDetail signup'>Last Name: </p>
+        <%= f.text_field :last_name, :required => true, :class => 'messageField signup'%>
+      </div>
+
+      <div class='messageLine signup'>
+        <p class='messageDetail signup'>Email: </p>
+        <%= f.text_field :email, :required => true, :class => 'messageField signup'%>
+      </div>
+
+      <div class='messageLine signup'><p class='messageDetail signup'>Password: </p>
+        <%= f.password_field :password, :required => true, :class => 'messageField signup'%>
+      </div>
+
+      <div class='messageLine signup'>
+        <%= f.submit "Create Account", :class => "signButton new" %>
+      </div>
+
+<% end %>
+
+</div>

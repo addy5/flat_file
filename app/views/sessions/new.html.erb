@@ -1,0 +1,23 @@
+<div class="container message">
+
+<h1 class='title'><span class='regularFont'>Sign in to </span>Teach<span class='logoM'>M</span>e!</h1>
+
+
+<%= form_for User.new, url:sessions_path do |f| %>
+
+<div class='messageLine signup first'>
+  <p class='messageDetail signup'>Email: </p>
+  <%= f.text_field :email, :class => 'messageField'%>
+</div>
+
+<div class='messageLine signup'>
+  <p class='messageDetail signup'>Password: </p>
+  <%= f.text_field :password, :class => 'messageField signup'%>
+</div>
+
+<div class='messageLine signup'><%= f.submit "Sign In", :class => "signButton" %></div>
+
+<% end %>
+
+
+</div>

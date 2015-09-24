@@ -1,0 +1,33 @@
+<div class="container">
+
+  <h1 class='title'>My <span class='logoM'>D</span>ashboard</h1>
+    <h1 class='about'>"Believe in yourself. Dream. Try. Do good."</h1>
+
+
+  <div class="dashLeft" style="width:780px;min-height:400px;border:1px solid grey; margin:10px 10px; display: inline-block; vertical-align: top;">
+  <p style="font-size: 23px; font-weight:bold; position:relative; margin: 10px 10px;"> My Listings</p>
+
+  <% @user.posts.all.each do |p| %>
+      <div class="listingContainer" style="border:1px solid grey; margin:12px 12px; min-height: 60px; padding-top: 12px; font-weight: bold; background-color:#D4CFCF; text-align: left;">
+        <a href="/posts/<%=p.id%>" style="font-size:18px; color:#486D84;">
+          <p style="margin-left:5px;">
+            <%= p.title.capitalize %>  - <%= p.city %>
+          </p>
+        </a>
+
+      <hr style="margin-left:5px;">
+
+      </div>
+  <% end %>
+
+  <% if @user.posts.empty? %>
+      <p style="margin: 10px auto;">You have no listings at this time</p>
+  <% end %>
+
+      <a href="/posts/new" style="display: inline-block; height:35px; width:150px; background-color:orange; border-radius:4px; line-height: 35px; margin: 10px auto;">Create New Post</a>
+  </div>
+
+<!-- ********************************************************************* -->
+
+
+</div>
