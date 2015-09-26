@@ -1,11 +1,21 @@
+<div class="fullWidthContainer">
+
+
   <% @user.posts.all.each do |p| %>
 
-  <div style="display:inline-block; width: 33%; float:left; background-image: url(<%=  p.image.url(:large)%>);"></div>
+    <div class="posterModule">
+      <img style="width: 100%;" src="<%= p.image.url(:large)%>" alt="poster image" />
+      <p class="details">
+        Artist: &nbsp; <%= p.rate %> <br>
+        Year: &nbsp; <%= p.city %> <br>
+        Comments: &nbsp;<span> <%= p.body %>  </span>
+      </p>
+    </div>
 
   <% end %>
 
-
-  <% @user.posts.all.each do |p| %>
+</div>
+  <!-- <% @user.posts.all.each do |p| %>
       <div class="listingContainer" style="border:1px solid grey; margin:12px 12px; min-height: 60px; padding-top: 12px; font-weight: bold; background-color:#D4CFCF; text-align: left;">
         <a href="/posts/<%=p.id%>" style="font-size:18px; color:#486D84;">
           <p style="margin-left:5px;">
@@ -22,4 +32,4 @@
       <p style="margin: 10px auto;">You have no listings at this time</p>
   <% end %>
 
-  <a href="/posts/new" style="display: inline-block; height:35px; width:150px; background-color:orange; border-radius:4px; line-height: 35px; margin: 10px auto;">Create New Post</a>
+  <a href="/posts/new" style="display: inline-block; height:35px; width:150px; background-color:orange; border-radius:4px; line-height: 35px; margin: 10px auto;">Create New Post</a> -->

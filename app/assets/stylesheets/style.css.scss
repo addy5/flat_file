@@ -38,6 +38,36 @@ ul{
   height: 35px;
 }
 
+.fullWidthContainer{
+  width: 100%;
+  margin: 0;
+  min-height: 700px;
+}
+
+.posterModule{
+  display:inline-block;
+  width: 33%;
+  float:left;
+  position: relative;
+}
+
+.details{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 88%;
+  padding:5% 6%;
+  min-height: 170px;
+  background: white;
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+  background-color: rgba(20,20,20,0.88);
+}
+
 #coverPic{
   height: 310px;
   background: asset_url('mainPic.jpg');
