@@ -46,6 +46,7 @@ a{
   width: 100%;
   min-height: 700px;
   margin: 0;
+  text-align: center;
 }
 
 .posterModule{
@@ -96,9 +97,12 @@ a{
 .newPoster{
   width: 450px;
   min-height: 360px;
+  max-height: 400px;
   text-align: center;
   border: 1px solid grey;
   padding: 20px 0;
+  margin: 30px auto;
+  clear: both;
 }
 
 .newPosterLine{
@@ -145,6 +149,8 @@ a{
   font-family: 'Oswald', sans-serif;
   margin: 0 auto;
 }
+
+// END OF NEW POSTER BOX STYLING
 
 .about{
   width: 100%;

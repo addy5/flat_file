@@ -6,9 +6,9 @@
     <div class="posterModule">
       <img style="width: 100%;" src="<%= p.image.url(:large)%>" alt="poster image" />
       <p class="details">
-        Artist: &nbsp; <%= p.rate %> <br>
-        Year: &nbsp; <%= p.city %> <br>
-        Comments: &nbsp;<span> <%= p.body %>  </span>
+        Artist: &nbsp; <%= p.artist %> <br>
+        Year: &nbsp; <%= p.year %> <br>
+        Comments: &nbsp;<span> <%= p.comments %>  </span>
       </p>
     </div>
 
@@ -39,7 +39,7 @@
       </div>
 
       <div class='newPosterLine' style="text-align: center;">
-        <%= f.submit "Create Post", :class => "button" %>
+        <%= f.submit "Post To Wall", :class => "button" %>
       </div>
 
     <% end %>
@@ -47,21 +47,6 @@
   </div>
 
 </div>
-  <!-- <% @user.posts.all.each do |p| %>
-      <div class="listingContainer" style="border:1px solid grey; margin:12px 12px; min-height: 60px; padding-top: 12px; font-weight: bold; background-color:#D4CFCF; text-align: left;">
-        <a href="/posts/<%=p.id%>" style="font-size:18px; color:#486D84;">
-          <p style="margin-left:5px;">
-            <%= p.title.capitalize %>  - <%= p.city %>
-          </p>
-        </a>
-
-      <hr style="margin-left:5px;">
-
-      </div>
-  <% end %>
-
-  <% if @user.posts.empty? %>
-      <p style="margin: 10px auto;">You have no listings at this time</p>
-  <% end %>
-
-  <a href="/posts/new" style="display: inline-block; height:35px; width:150px; background-color:orange; border-radius:4px; line-height: 35px; margin: 10px auto;">Create New Post</a> -->
+  <!-- <% if @user.posts.empty? %> -->
+      <!-- <p style="margin: 10px auto;">You have no listings at this time</p> -->
+  <!-- <% end %> -->

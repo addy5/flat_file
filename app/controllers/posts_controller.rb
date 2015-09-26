@@ -11,8 +11,8 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.assign_attributes(:user_id => session[:user_id])
     if @post.save
-      flash[:newUser] = "Post: #{@post.title} successfully created"
-      redirect_to "/posts/#{@post.id}"
+      flash[:newUser] = "Post: successfully created"
+      redirect_to "/users/#{session[:user_id]}"
     else
       render "/posts/new"
     end
