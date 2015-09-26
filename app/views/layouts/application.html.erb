@@ -22,10 +22,12 @@
 
   <!-- NAVBAR -->
   <ul class="navBar">
-    <%= image_tag("posterLogo.png", :alt => "poster Image", :class => "logo") %>
-    <li>Wall</li>
-    <li>Account</li>
-    <li>Contact</li>
+    <a href="/">
+      <%= image_tag("posterLogo.png", :alt => "poster Image", :class => "logo") %>
+    </a>
+    <a href="/users/<%= session[:user_id]%>"><li>Wall</li><a>
+    <a href="/users/<%= session[:user_id]%>/edit"><li>Account</li></a>
+    <a href="/about"><li>Contact</li></a>
     <li>Credits</li>
   </ul>
 
