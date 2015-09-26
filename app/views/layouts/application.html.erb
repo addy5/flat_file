@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css"> -->
-  <link href='https://fonts.googleapis.com/css?family=Mr+Bedfort' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+
   <title>TeachMe</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -22,19 +20,17 @@
     <% end %>
   <% end %>
 
-  <ul class='header'>
-    <li class='header'><a href="/">Main</a></li>
-    <li class='header'><a href="/about">About</a></li>
-    <li class='header'><a href="/messages/new">Contact</a></li>
-    <% if current_user %>
-      <li class='header'><a href="/users/<%=session[:user_id]%>">Dashboard</a></li>
-      <li class='header'><a href="/users/<%=session[:user_id]%>/edit">Account</a></li>
-      <li class='header'><a href="/logout" data-method="delete" rel="nofollow">Log out</a></li>
-    <% else %>
-      <li class='header'><a href="/sessions/new">Log In</a></li>
-      <li class='header'><a href="/users/new">Sign Up</a></li>
-    <% end %>
+  <!-- NAVBAR -->
+  <ul class="navBar">
+    <%= image_tag("posterLogo.png", :alt => "poster Image", :class => "logo") %>
+    <li>Wall</li>
+    <li>Account</li>
+    <li>Contact</li>
+    <li>Credits</li>
   </ul>
+
+  <div class="navBackground"></div>
+
 
 <%= yield %>
 
