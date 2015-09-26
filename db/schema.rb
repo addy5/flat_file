@@ -16,23 +16,11 @@ ActiveRecord::Schema.define(version: 20150924234348) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "messages", force: :cascade do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.string   "email"
-    t.string   "subject"
-    t.text     "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "rate"
-    t.text     "profile_url"
-    t.text     "map_url"
-    t.text     "body"
-    t.string   "city"
+    t.string   "artist"
+    t.integer  "year"
+    t.text     "image_url"
+    t.text     "comments"
     t.integer  "user_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -43,17 +31,6 @@ ActiveRecord::Schema.define(version: 20150924234348) do
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
-
-  create_table "requests", force: :cascade do |t|
-    t.text     "message"
-    t.integer  "user_id"
-    t.integer  "post_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "requests", ["post_id"], name: "index_requests_on_post_id", using: :btree
-  add_index "requests", ["user_id"], name: "index_requests_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
@@ -66,6 +43,4 @@ ActiveRecord::Schema.define(version: 20150924234348) do
   end
 
   add_foreign_key "posts", "users"
-  add_foreign_key "requests", "posts"
-  add_foreign_key "requests", "users"
 end

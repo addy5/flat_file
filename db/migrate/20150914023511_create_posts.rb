@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :artist
       t.integer :year
-      t.text :profile_url
+      t.text :image_url
       t.text :comments
       t.references :user, index: true, foreign_key: true
 

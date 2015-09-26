@@ -18,7 +18,12 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+    else
+      redirect_to new_session_path
+      flash[:notice] = "Please log in to proceed."
+    end
   end
 
   def update
@@ -33,12 +38,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    if session[:user_id]
-      @user = User.find(session[:user_id])
-    else
-      redirect_to new_session_path
-      flash[:notice] = "Please log in to proceed."
-    end
+    @user = User.find(params[:id])
+    @post = Post.new
   end
 
   private

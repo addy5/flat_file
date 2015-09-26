@@ -10,8 +10,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.assign_attributes(:user_id => session[:user_id])
-    # @city = :city
-    @post.assign_attributes(:map_url => "https://maps.googleapis.com/maps/api/staticmap?center=#{@post.city}&zoom=11&size=300x200")
     if @post.save
       flash[:newUser] = "Post: #{@post.title} successfully created"
       redirect_to "/posts/#{@post.id}"
@@ -27,7 +25,6 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      @post.update(:map_url => "https://maps.googleapis.com/maps/api/staticmap?center=#{@post.city}&zoom=11&size=300x200")
       flash[:newUser] = "Post: #{@post.title} successfully updated"
       redirect_to "/posts/#{@post.id}"
     else
@@ -71,7 +68,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :rate, :city, :profile_url, :image, :body)
+      params.require(:post).permit(:artist, :year, :image_url, :comments, :image)
     end
 
 end

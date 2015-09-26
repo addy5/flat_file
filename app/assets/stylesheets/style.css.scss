@@ -92,6 +92,60 @@ a{
   line-height: 17px;
 }
 
+// CREATE NEW POSTER BOX:
+.newPoster{
+  width: 450px;
+  min-height: 360px;
+  text-align: center;
+  border: 1px solid grey;
+  padding: 20px 0;
+}
+
+.newPosterLine{
+  min-height: 40px;
+  width: 100%;
+  position: relative;
+  text-align: left;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+.newPosterLine label{
+  width: 25%;
+  text-align: right;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  font-size: 22px;
+  margin-left: 30px;
+  vertical-align: top;
+}
+
+.newPosterInput{
+  height: 28px;
+  font-size: 20px;
+  width: 35%;
+  margin-left: 15px;
+}
+
+.newField{
+  height: 120px;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+.newPosterLine .button {
+  width: 120px;
+  height: 33px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  background-color: red;
+  border-radius: 6px;
+  font-family: 'Oswald', sans-serif;
+  margin: 0 auto;
+}
+
 .about{
   width: 100%;
   font-size: 25px;
