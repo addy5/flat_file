@@ -1,31 +1,29 @@
-<div class="fullWidthContainer">
+  <h1 class='title'>NostalgArt Sign Up</h1>
 
+  <%= form_for @user do |f| %>
 
-<%= form_for @user do |f| %>
-
-      <div class='messageLine signup first'>
-        <p class='messageDetail signup'>First Name: </p>
-        <%= f.text_field :first_name, :required => true, :class => 'messageField'%>
+      <div class='signInField first'>
+        <!-- <label class=''>First Name: </label> -->
+        <%= f.text_field :first_name, :required => true, :class => 'loginInput', :placeholder => 'first Name' %>
       </div>
 
-      <div class='messageLine signup'>
-        <p class='messageDetail signup'>Last Name: </p>
-        <%= f.text_field :last_name, :required => true, :class => 'messageField signup'%>
+      <div class='signInField'>
+        <!-- <label class=''>Last Name: </label> -->
+        <%= f.text_field :last_name, :required => true, :class => 'loginInput', :placeholder => 'last Name'%>
       </div>
 
-      <div class='messageLine signup'>
-        <p class='messageDetail signup'>Email: </p>
-        <%= f.text_field :email, :required => true, :class => 'messageField signup'%>
+      <div class='signInField'>
+        <!-- <label>Email: </label> -->
+        <%= f.text_field :email, :required => true, :class => 'loginInput', :placeholder => 'email'%>
       </div>
 
-      <div class='messageLine signup'><p class='messageDetail signup'>Password: </p>
-        <%= f.password_field :password, :required => true, :class => 'messageField signup'%>
+      <div class='signInField'>
+        <!-- <label>Password: </label> -->
+        <%= f.password_field :password, :required => true, :class => 'loginInput', :placeholder => 'password'%>
       </div>
 
-      <div class='messageLine signup'>
-        <%= f.submit "Create Account", :class => "signButton new" %>
+      <div class='signInField'>
+        <%= f.submit "Sign Up", :class => "signButton" %>
       </div>
 
-<% end %>
-
-</div>
+  <% end %>

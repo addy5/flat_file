@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'posts#index'
   get '/about' => 'users#about'
-	delete '/logout' => 'sessions#destroy'
+	get '/logout' => 'sessions#destroy'
   get '/posts/search' => 'posts#search'
   resources :posts, only: [:new, :create, :update, :edit, :index, :show, :destroy]
   resources :users, only: [:new, :create, :edit, :update, :index, :show]

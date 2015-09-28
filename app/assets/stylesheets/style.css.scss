@@ -3,6 +3,22 @@ body{
   font-family: 'Oswald', sans-serif;
 }
 
+.newUser, .loggedIn{
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  background: #DFF0DB;
+  color: #298043;
+}
+
+.notice{
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  background: #F3E0E0;
+  color: #BD3B36;
+}
+
 .logo{
   height:80px;
   position: absolute;

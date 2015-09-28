@@ -12,27 +12,38 @@
 
 <body>
 
-  <% flash.each do |name, msg| %>
-    <% if name == "newUser" %>
-      <%= content_tag :div, sanitize(msg), class: name %>
-    <% else %>
-      <%= content_tag :div, msg, class: name %>
-    <% end %>
-  <% end %>
 
   <!-- NAVBAR -->
   <ul class="navBar">
     <a href="/">
       <%= image_tag("posterLogo.png", :alt => "poster Image", :class => "logo") %>
     </a>
-    <a href="/users/<%= session[:user_id]%>"><li>Wall</li><a>
-    <a href="/users/<%= session[:user_id]%>/edit"><li>Account</li></a>
+    <% if session[:user_id] %>
+      <a href="/users/<%= session[:user_id]%>"><li>Wall</li></a>
+      <a href="/users/<%= session[:user_id]%>/edit"><li>Account</li></a>
+    <% else %>
+      <a href="/users/new"><li>Sign Up</li></a>
+      <a href="/sessions/new"><li>Log In</li></a>
+    <% end %>
     <a href="/about"><li>Contact</li></a>
     <li>Credits</li>
+
+    <% if session[:user_id] %>
+      <a href="/logout"><li>Logout</li></a>
+    <% end %>
+
   </ul>
 
   <div class="navBackground"></div>
 
+  <!-- FLASH NOTICE -->
+    <% flash.each do |name, msg| %>
+      <% if name == "newUser" %>
+        <%= content_tag :div, sanitize(msg), class: name %>
+      <% else %>
+        <%= content_tag :div, msg, class: name %>
+      <% end %>
+    <% end %>
 
 <%= yield %>
 

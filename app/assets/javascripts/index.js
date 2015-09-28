@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+  // FLASH NOTICE
    $('.notice').delay(500).slideDown('normal', function() {
       $(this).delay(2500).slideUp(500);
    });
@@ -16,7 +16,7 @@ $(document).ready(function() {
    $('.notice1').on('click', function(){$(this).slideUp(500);});
 
 
-
+// HANDLE POSTER DETAILS HIDE/SHOW
     var posterModule = $('.posterModule');
     var details = $('.details');
     var navBar = $('.navBar');
