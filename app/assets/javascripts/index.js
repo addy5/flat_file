@@ -68,5 +68,16 @@ $(document).ready(function() {
       e.preventDefault();
     });
 
+    var addNewPoster = $('.addNewPoster');
+    var newPoster = $('.newPoster');
+
+    addNewPoster.on('click', function(){
+      $(this).fadeOut(600, function(){
+        newPoster.fadeIn(1200);
+        var n = $(document).height();
+        $('html, body').animate({ scrollTop: n }, 900);
+
+      });
+    });
 
 });
