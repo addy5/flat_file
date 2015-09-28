@@ -27,13 +27,12 @@ $(document).ready(function() {
       var self = $(this);
 
       if(timer) clearTimeout(timer);
-
+      if (self.children('p').hasClass('active')) return null;
       timer = setTimeout(function(){
         $('.active').removeClass('active').fadeOut('normal');
-
         self.children('.details').addClass('active').fadeIn('slow');
-        console.log($(this));
       },750);
+
     });
 
     var scroll_pos = 0;
@@ -76,7 +75,8 @@ $(document).ready(function() {
         newPoster.fadeIn(1200);
         var n = $(document).height();
         $('html, body').animate({ scrollTop: n }, 900);
-
+        if(timer) clearTimeout(timer);
+        $('.active').removeClass('active').fadeOut('normal');
       });
     });
 

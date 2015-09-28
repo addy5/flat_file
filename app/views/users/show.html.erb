@@ -1,7 +1,55 @@
 <div class="fullWidthContainer">
 
+  <!-- <%= @user.posts[2].artist %>
+  <%= @user.posts.length / 3 %> -->
 
-  <% @user.posts.all.each do |p| %>
+  <ul class="posterColumn left">
+    <% for i in 0..@user.posts.length - 1 %>
+      <% if i % 3 == 0 %>
+        <div class="posterModule">
+          <img style="width: 100%;" src="<%= @user.posts[i].image.url(:large)%>" alt="poster image" />
+          <p class="details">
+            Artist: &nbsp; <%= @user.posts[i].artist %> <br>
+            Year: &nbsp; <%= @user.posts[i].year %> <br>
+            Comments: &nbsp;<span> <%= @user.posts[i].comments %>  </span>
+          </p>
+        </div>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <ul class="posterColumn center">
+    <% for i in 0..@user.posts.length - 1 %>
+      <% if i % 3 == 1 %>
+        <div class="posterModule">
+          <img style="width: 100%;" src="<%= @user.posts[i].image.url(:large)%>" alt="poster image" />
+          <p class="details">
+            Artist: &nbsp; <%= @user.posts[i].artist %> <br>
+            Year: &nbsp; <%= @user.posts[i].year %> <br>
+            Comments: &nbsp;<span> <%= @user.posts[i].comments %>  </span>
+          </p>
+        </div>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <ul class="posterColumn right">
+    <% for i in 0..@user.posts.length - 1 %>
+      <% if i % 3 == 2 %>
+        <div class="posterModule">
+          <img style="width: 100%;" src="<%= @user.posts[i].image.url(:large)%>" alt="poster image" />
+          <p class="details">
+            Artist: &nbsp; <%= @user.posts[i].artist %> <br>
+            Year: &nbsp; <%= @user.posts[i].year %> <br>
+            Comments: &nbsp;<span> <%= @user.posts[i].comments %>  </span>
+          </p>
+        </div>
+      <% end %>
+    <% end %>
+  </ul>
+
+
+  <!-- <% @user.posts.all.each do |p| %>
 
     <div class="posterModule">
       <img style="width: 100%;" src="<%= p.image.url(:large)%>" alt="poster image" />
@@ -12,10 +60,10 @@
       </p>
     </div>
 
-  <% end %>
+  <% end %> -->
 
   <div class="addNewPoster">
-    Add More
+    Add Poster
   </div>
 
   <div class="newPoster">
