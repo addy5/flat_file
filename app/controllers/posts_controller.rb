@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.assign_attributes(:user_id => session[:user_id])
+    @post.users << User.find(session[:user_id])
     if @post.save
       flash[:newUser] = "Post: successfully Added"
       redirect_to "/users/#{session[:user_id]}"

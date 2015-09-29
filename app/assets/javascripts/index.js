@@ -1,6 +1,5 @@
-$(document).ready(function() {
-
-  // FLASH NOTICE
+var ready = function() {
+  console.log('active js');
    $('.notice').delay(500).slideDown('normal', function() {
       $(this).delay(2500).slideUp(500);
    });
@@ -12,8 +11,6 @@ $(document).ready(function() {
    $('.newUser').delay(500).slideDown('normal', function() {
       $(this).delay(6000).slideUp(500);
    });
-
-   $('.notice1').on('click', function(){$(this).slideUp(500);});
 
 
 // HANDLE POSTER DETAILS HIDE/SHOW
@@ -80,4 +77,7 @@ $(document).ready(function() {
       });
     });
 
-});
+};
+
+$(document).on('page:load', ready);
+$(document).ready(ready);

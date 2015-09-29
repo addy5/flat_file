@@ -9,7 +9,9 @@ body{
   line-height: 40px;
   background: #DFF0DB;
   color: #298043;
-  margin-top: -3px;;
+  margin-top: -3px;
+  position: absolute;
+  width: 100%;
 }
 
 .notice{
@@ -18,7 +20,9 @@ body{
   line-height: 40px;
   background: #F3E0E0;
   color: #BD3B36;
-  margin-top: -3px;;
+  margin-top: -3px;
+  position: absolute;
+  width: 100%;
 }
 
 .logo{

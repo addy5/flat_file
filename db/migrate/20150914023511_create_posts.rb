@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.integer :year
       t.text :image_url
       t.text :comments
-      t.references :user, index: true, foreign_key: true
+      # t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end
