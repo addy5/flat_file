@@ -18,6 +18,7 @@
           <p class="indexPostDetails">
             Artist: &nbsp; <%= @posts[i].artist %> <br>
             Year: &nbsp; <%= @posts[i].year %> <br>
+            <a href="/users/<%= @posts[i].users.first.id %>"> >> More from this wall</a>
           </p>
         </div>
     <% end %>

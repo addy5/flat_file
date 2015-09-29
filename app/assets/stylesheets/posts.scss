@@ -24,6 +24,8 @@
   // border: 1px solid grey;
   display: inline-block;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .indexPostDetails{
@@ -32,7 +34,7 @@
   left: 0;
   width: 88%;
   padding:5% 6%;
-  min-height: 100px;
+  min-height: 95px;
   background: white;
   display: inline-block;
   margin: 0;
@@ -41,4 +43,13 @@
   line-height: 30px;
   color: white;
   background-color: rgba(20,20,20,0.68);
+}
+
+.indexPostDetails a{
+  text-decoration: none;
+}
+
+.indexPostDetails a:hover{
+  // color: rgba(23,23,255,0.8);
+  font-size: 22px;
 }
