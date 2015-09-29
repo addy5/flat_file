@@ -8,15 +8,17 @@
 
     <div class='signInField first'>
       <!-- <label>Email: </label> -->
+      <%= image_tag("user1.png", :alt => "User Image", :style => "height:28px; position: absolute; margin-left: 3px; margin-top: 2px;") %>
       <%= f.text_field :email, :class => 'loginInput', :placeholder => 'email'%>
     </div>
 
     <div class='signInField'>
       <!-- <label>Password: </label> -->
-      <%= f.text_field :password, :class => 'loginInput', :placeholder => 'password' %>
+      <%= image_tag("lock1.png", :alt => "User Image", :style => "height:28px; position: absolute; margin-left: 3px; margin-top: 3px;") %>
+      <%= f.password_field :password, :class => 'loginInput', :placeholder => 'password' %>
     </div>
 
-    <div class='signInField'><%= f.submit "Login", :class => "signButton" %></div>
+    <div class='signInField'><%= f.submit "Login", :class => "loginButton" %></div>
 
     <% end %>
 

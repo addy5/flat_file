@@ -1,6 +1,14 @@
 <div class="fullWidthContainer">
-  <h1>this is the index</h1>
 
+  <div style="margin-top: 30px;">
+
+    <%= form_tag("/posts/search", method: "get") do %>
+      <%= text_field_tag :query,nil, :placeholder => "name | artist | keyword", :style => "height:27px; width: 30%; min-width: 250px; text-align:center; font-size: 17px; margin: 0; padding-right: 28px; border-radius: 5px; border: 1px solid grey;" %>
+
+      <%= image_submit_tag("Search.png", :name => 'filter', :style => "height:29px; vertical-align: top; border: 1px solid grey; margin: 0; position:relative; left: -34px; border-top-right-radius:5px; border-bottom-right-radius:5px; ") %>
+    <% end %>
+
+  </div>
 
 </div>
 <div class="footer">

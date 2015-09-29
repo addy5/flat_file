@@ -88,3 +88,31 @@
 }
 
 // END OF NEW POSTER BOX STYLING
+
+// NEW USER STYLING
+.signUpContainer{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-image: url('wspcs.jpg');
+  background-size: cover;
+  opacity: 0.95;
+  z-index: -1;
+}
+
+.signButton{
+  height: 32px;
+  background-color: teal;
+  border-radius: 5px;
+  width: 120px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+// END OF NEW USER STYLING

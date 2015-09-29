@@ -71,7 +71,7 @@ var ready = function() {
       $(this).fadeOut(600, function(){
         newPoster.fadeIn(1200);
         var n = $(document).height();
-        $('html, body').animate({ scrollTop: n }, 900);
+        $('html, body').animate({ scrollTop: n - 790 }, 900);
         if(timer) clearTimeout(timer);
         $('.active').removeClass('active').fadeOut('normal');
       });

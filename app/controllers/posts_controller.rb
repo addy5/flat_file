@@ -53,10 +53,11 @@ class PostsController < ApplicationController
 
     @posts.each do |p|
       array = []
-      p.title.split(/[\s,]+/).each {|w| array.push(w.downcase)}
-      p.body.split(/[\s,]+/).each {|w| array.push(w.downcase)}
-      p.city.split(/[\s,]+/).each {|w| array.push(w.downcase)}
-      p.user.first_name.split(/[\s,]+/).each {|w| array.push(w.downcase)}
+      p.artist.split(/[\s,]+/).each {|w| array.push(w.downcase)}
+      p.comments.split(/[\s,]+/).each {|w| array.push(w.downcase)}
+      p.users.each { |u|
+        u.first_name.split(/[\s,]+/).each {|w| array.push(w.downcase)}
+      }
       @query.split(/[\s,]+/).each do |m|
         @match.push(p.id) if array.include?(m.downcase)
       end
