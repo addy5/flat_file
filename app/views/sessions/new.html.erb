@@ -1,19 +1,23 @@
 <div class="loginContainer"></div>
 
-  <h1 class='title'>NostalgArt Login</h1>
+<div class="loginModal">
 
-  <%= form_for User.new, url:sessions_path do |f| %>
+    <h1 class='title'>NostalgArt Login</h1>
 
-  <div class='signInField first'>
-    <!-- <label>Email: </label> -->
-    <%= f.text_field :email, :class => 'loginInput', :placeholder => 'email'%>
-  </div>
+    <%= form_for User.new, url:sessions_path do |f| %>
 
-  <div class='signInField'>
-    <!-- <label>Password: </label> -->
-    <%= f.text_field :password, :class => 'loginInput', :placeholder => 'password' %>
-  </div>
+    <div class='signInField first'>
+      <!-- <label>Email: </label> -->
+      <%= f.text_field :email, :class => 'loginInput', :placeholder => 'email'%>
+    </div>
 
-  <div class='signInField'><%= f.submit "Sign In", :class => "signButton" %></div>
+    <div class='signInField'>
+      <!-- <label>Password: </label> -->
+      <%= f.text_field :password, :class => 'loginInput', :placeholder => 'password' %>
+    </div>
 
-  <% end %>
+    <div class='signInField'><%= f.submit "Login", :class => "signButton" %></div>
+
+    <% end %>
+
+</div>
