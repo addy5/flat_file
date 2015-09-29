@@ -1,21 +1,32 @@
 <div class="fullWidthContainer">
 
+<h1 class="updateHeader">Update Information</h1>
 
 <%= form_for @user do |f| %>
 
-      <div class=''>
-        <p class=''>First Name: </p>
-        <%= f.text_field :first_name, :required => true, :class => 'messageField'%>
+      <div class='signInField first'>
+        <label>First Name: </label>
+        <%= f.text_field :first_name, :required => true, :class => 'updateInput'%>
       </div>
 
-      <div class=''>
-        <p class=''>Last Name: </p>
-        <%= f.text_field :last_name, :required => true, :class => 'messageField'%>
+      <div class='signInField'>
+        <label>Last Name: </label>
+        <%= f.text_field :last_name, :required => true, :class => 'updateInput'%>
       </div>
 
-      <div class=''>
-        <p class=''>Email: </p>
-        <%= f.text_field :email, :required => true, :class => 'messageField'%>
+      <div class='signInField'>
+        <label>Email: </label>
+        <%= f.text_field :email, :required => true, :class => 'updateInput'%>
+      </div>
+
+      <div class='signInField'>
+        <label>New Password: </label>
+        <%= f.text_field :password, :required => true, :class => 'updateInput'%>
+      </div>
+
+      <div class='signInField'>
+        <label>Confirm Password: </label>
+        <input class='updateInput'>
       </div>
 
       <div class=''>

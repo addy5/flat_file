@@ -2,7 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// INDEX STYLING:
 .searchTitle{
   font-size: 23px;
   margin: 30px 0;
+}
+
+.shuffledPosterContainer{
+  width: 93%;
+  min-height: 450px;
+  // border: 1px solid grey;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.indexPosterModule{
+  width: 28%;
+  height: 480px;
+  margin: 1%;
+  // border: 1px solid grey;
+  display: inline-block;
+  position: relative;
+}
+
+.indexPostDetails{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 88%;
+  padding:5% 6%;
+  min-height: 100px;
+  background: white;
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+  background-color: rgba(20,20,20,0.68);
 }

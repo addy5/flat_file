@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .signInField label{
-  width: 110px;
+  width: 120px;
   text-align: right;
   display: inline-block;
 }
@@ -116,3 +116,22 @@
 }
 
 // END OF NEW USER STYLING
+
+// UPDATE USER STYLING
+.updateHeader{
+  margin: 35px 0;
+  font-size: 28px;
+}
+
+.updateInput{
+  height: 30px;
+  width: 10%;
+  min-width: 230px;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 0 5px 0 5px;
+  border: 1px solid grey;
+  margin-left: 5px;
+}
+
+// END UPDATE USER STYLING
