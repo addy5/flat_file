@@ -45,57 +45,46 @@
     <% end %>
   </ul>
 
-
-  <!-- <% @user.posts.all.each do |p| %>
-
-    <div class="posterModule">
-      <img style="width: 100%;" src="<%= p.image.url(:large)%>" alt="poster image" />
-      <p class="details">
-        Artist: &nbsp; <%= p.artist %> <br>
-        Year: &nbsp; <%= p.year %> <br>
-        Comments: &nbsp;<span> <%= p.comments %>  </span>
-      </p>
+  <% if params[:id].to_s == session[:user_id].to_s %>
+    <div class="addNewPoster">
+      Add Poster
     </div>
 
-  <% end %> -->
+    <div class="newPoster">
+      <%= form_for @post, html: { multipart: true} do |f| %>
 
-  <div class="addNewPoster">
-    Add Poster
-  </div>
+        <div class='newPosterLine'>
+          <label class=''>Artist:</label>
+          <%= f.text_field :artist, :required => true, :class => 'newPosterInput'%>
+        </div>
 
-  <div class="newPoster">
-    <%= form_for @post, html: { multipart: true} do |f| %>
+        <div class='newPosterLine'>
+          <label class=''>Year:</label>
+          <%= f.text_field :year, :required => true, :class => 'newPosterInput'%>
+        </div>
 
-      <div class='newPosterLine'>
-        <label class=''>Artist:</label>
-        <%= f.text_field :artist, :required => true, :class => 'newPosterInput'%>
-      </div>
+        <div class='newPosterLine'>
+          <label class=''>Image:</label>
+          <%= f.file_field :image, :style => 'margin:10px 0 0 0%; font-size: 13px; position:relative; top: -5px; left: 15px;' %>
 
-      <div class='newPosterLine'>
-        <label class=''>Year:</label>
-        <%= f.text_field :year, :required => true, :class => 'newPosterInput'%>
-      </div>
+        </div>
 
-      <div class='newPosterLine'>
-        <label class=''>Image:</label>
-        <%= f.file_field :image, :style => 'margin:10px 0 0 0%; font-size: 13px; position:relative; top: -5px; left: 15px;' %>
+        <div class='newPosterLine'>
+          <label class=''>Comments:</label>
+          <%= f.text_area :comments, :required => true, :class => 'newPosterInput newField'%>
+        </div>
 
-      </div>
+        <div class='newPosterLine' style="text-align: center;">
+          <%= f.submit "Post To Wall", :class => "button" %>
+        </div>
 
-      <div class='newPosterLine'>
-        <label class=''>Comments:</label>
-        <%= f.text_area :comments, :required => true, :class => 'newPosterInput newField'%>
-      </div>
+      <% end %>
 
-      <div class='newPosterLine' style="text-align: center;">
-        <%= f.submit "Post To Wall", :class => "button" %>
-      </div>
-
-    <% end %>
-
-  </div>
+    </div>
+  <% end %>
 
 </div>
+
 <div class="footer">
   NostalgArt® 2015
 </div>
