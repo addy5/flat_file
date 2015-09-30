@@ -2,6 +2,7 @@
 
   <ul class="posterColumn left">
     <% for i in 0..@user.posts.length - 1 %>
+
       <% if i % 3 == 0 %>
         <div class="posterModule">
           <img style="width: 100%;" src="<%= @user.posts[i].image.url(:large)%>" alt="poster image" />
@@ -12,11 +13,13 @@
           </p>
         </div>
       <% end %>
+
     <% end %>
   </ul>
 
   <ul class="posterColumn center">
     <% for i in 0..@user.posts.length - 1 %>
+
       <% if i % 3 == 1 %>
         <div class="posterModule">
           <img style="width: 100%;" src="<%= @user.posts[i].image.url(:large)%>" alt="poster image" />
@@ -27,11 +30,13 @@
           </p>
         </div>
       <% end %>
+
     <% end %>
   </ul>
 
   <ul class="posterColumn right">
     <% for i in 0..@user.posts.length - 1 %>
+
       <% if i % 3 == 2 %>
         <div class="posterModule">
           <img style="width: 100%;" src="<%= @user.posts[i].image.url(:large)%>" alt="poster image" />
@@ -42,6 +47,7 @@
           </p>
         </div>
       <% end %>
+      
     <% end %>
   </ul>
 
