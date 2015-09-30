@@ -26,10 +26,10 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      flash[:newUser] = "Post: #{@post.title} successfully updated"
+      flash[:newUser] = "Post successfully updated"
       redirect_to "/posts/#{@post.id}"
     else
-      flash[:notice] = "Post: #{@post.title} was not successfully updated. Missing parameters."
+      flash[:notice] = "Post was not successfully updated. Missing parameters."
       redirect_to "/posts/#{@post.id}"
     end
   end
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     if @post.destroy
-      flash[:newUser] = "Post: #{@post.title} successfully deleted"
+      flash[:newUser] = "Post successfully deleted"
       redirect_to "/posts"
     end
   end

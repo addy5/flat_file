@@ -102,6 +102,27 @@ a{
   position: relative;
 }
 
+.deletePosterButton{
+  color: black;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  // text-shadow:
+  // -1px -1px 0 #000,
+  //  1px -1px 0 #000,
+  //  -1px 1px 0 #000,
+  //   1px 1px 0 #000;
+  width: 26px;
+  padding: 0;
+  text-align: left;
+}
+
+.deletePosterButton:hover{
+  cursor: pointer;
+}
 
 .posterModule img{
   width: 100%;

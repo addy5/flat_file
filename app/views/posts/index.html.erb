@@ -1,5 +1,4 @@
 <div class="fullWidthContainer">
-
   <!-- SEARCH BOX: -->
   <div style="margin-top: 45px;">
     <%= form_tag("/posts/search", method: "get") do %>
@@ -18,7 +17,7 @@
           <p class="indexPostDetails">
             Artist: &nbsp; <%= @posts[i].artist %> <br>
             Year: &nbsp; <%= @posts[i].year %> <br>
-            <a href="/users/<%= @posts[i].users.first.id %>"> >> More from this wall</a>
+            <a href="/users/<%= @posts[i].user.id %>"> >> More from this wall</a>
           </p>
         </div>
     <% end %>

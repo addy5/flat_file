@@ -77,6 +77,12 @@ var ready = function() {
       });
     });
 
+    var deletePosterButton = $('.deletePosterButton');
+
+    deletePosterButton.on('click', function(){
+      console.log($(this).attr('id'));
+    });
+
 };
 
 $(document).on('page:load', ready);
