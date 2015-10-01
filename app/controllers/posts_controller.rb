@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     # @post.users << User.find(session[:user_id])
     @post.user_id = session[:user_id]
     if @post.save
-      flash[:newUser] = "Post: successfully Added"
+      flash[:newUser] = "Post successfully added"
       redirect_to "/users/#{session[:user_id]}"
     else
       render "/posts/new"
@@ -56,9 +56,7 @@ class PostsController < ApplicationController
       array = []
       p.artist.split(/[\s,]+/).each {|w| array.push(w.downcase)}
       p.comments.split(/[\s,]+/).each {|w| array.push(w.downcase)}
-      p.users.each { |u|
-        u.first_name.split(/[\s,]+/).each {|w| array.push(w.downcase)}
-      }
+      p.user.first_name.split(/[\s,]+/).each {|w| array.push(w.downcase)}
       @query.split(/[\s,]+/).each do |m|
         @match.push(p.id) if array.include?(m.downcase)
       end
