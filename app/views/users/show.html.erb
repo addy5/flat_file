@@ -26,6 +26,10 @@
 
       <% if i % 3 == 1 %>
         <div class="posterModule">
+
+          <!-- DELETE POST BUTTON -->
+          <%= button_to "X", post_path(:id => @user.posts[i].id), :method => :delete,:class => 'deletePosterButton', :id => @user.posts[i].id %>
+
           <img style="width: 100%;" src="<%= @user.posts[i].image.url(:large)%>" alt="poster image" />
           <p class="details">
             Artist: &nbsp; <%= @user.posts[i].artist %> <br>
@@ -43,6 +47,10 @@
 
       <% if i % 3 == 2 %>
         <div class="posterModule">
+
+          <!-- DELETE POST BUTTON -->
+          <%= button_to "X", post_path(:id => @user.posts[i].id), :method => :delete,:class => 'deletePosterButton', :id => @user.posts[i].id %>
+
           <img style="width: 100%;" src="<%= @user.posts[i].image.url(:large)%>" alt="poster image" />
           <p class="details">
             Artist: &nbsp; <%= @user.posts[i].artist %> <br>
