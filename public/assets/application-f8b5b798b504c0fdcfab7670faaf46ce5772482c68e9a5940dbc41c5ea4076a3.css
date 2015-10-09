@@ -1,0 +1,612 @@
+/* line 7, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/posts.scss */
+.searchTitle {
+  font-size: 23px;
+  margin: 30px 0;
+}
+
+/* line 12, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/posts.scss */
+.shuffledPosterContainer {
+  width: 93%;
+  min-height: 450px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* line 20, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/posts.scss */
+.indexPosterModule {
+  width: 28%;
+  height: 480px;
+  margin: 1%;
+  display: inline-block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 31, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/posts.scss */
+.indexPostDetails {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 88%;
+  padding: 5% 6%;
+  min-height: 95px;
+  background: white;
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+  background-color: rgba(20, 20, 20, 0.68);
+}
+
+/* line 48, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/posts.scss */
+.indexPostDetails a {
+  text-decoration: none;
+}
+
+/* line 52, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/posts.scss */
+.indexPostDetails a:hover {
+  font-size: 22px;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* line 5, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/sessions.scss */
+.loginContainer {
+  width: 100%;
+  min-height: 400px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: url(/assets/avengersbg-390a4852b40b5f78f42249452b8aea4ec38ec7cd5c9a9885fe7080a4d83f41f5.JPG);
+  opacity: 0.95;
+  z-index: -1;
+}
+
+/* line 16, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/sessions.scss */
+.loginModal {
+  width: 30%;
+  min-width: 450px;
+  min-height: 260px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  position: relative;
+  margin-top: 10%;
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 5px;
+  padding-bottom: 20px;
+}
+
+/* line 29, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/sessions.scss */
+.title {
+  margin: 30px 0 30px 0;
+  font-size: 32px;
+  color: white;
+}
+
+/* line 40, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/sessions.scss */
+.signInField {
+  height: 45px;
+  margin: 2px 0;
+  width: 100%;
+}
+
+/* line 46, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/sessions.scss */
+.signInField .loginInput {
+  height: 30px;
+  width: 18%;
+  min-width: 230px;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 0 5px 0 40px;
+  border: 1px solid grey;
+}
+
+/* line 56, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/sessions.scss */
+.loginButton {
+  height: 32px;
+  background-color: teal;
+  border-radius: 5px;
+  width: 120px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 0;
+  margin-top: 10px;
+}
+/* line 1, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+body {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* line 6, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.bodyBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* line 14, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.newUser, .loggedIn {
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  background: #DFF0DB;
+  color: #298043;
+  margin-top: -3px;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+/* line 26, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.notice {
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  background: #F3E0E0;
+  color: #BD3B36;
+  margin-top: -3px;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+/* line 38, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.logo {
+  height: 80px;
+  position: absolute;
+  left: 8%;
+}
+
+/* line 44, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+a {
+  color: inherit;
+}
+
+/* line 48, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.navBar {
+  width: 100%;
+  height: 82px;
+  list-style: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 12;
+}
+
+/* line 58, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.navBackground {
+  width: 100%;
+  height: 85px;
+  background-color: black;
+  margin-bottom: 3px;
+}
+
+/* line 65, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.navBar li {
+  display: inline-block;
+  width: 80px;
+  margin: 0 10px;
+  font-size: 22px;
+  line-height: 85px;
+  font-family: 'Oswald', sans-serif;
+  vertical-align: top;
+  position: relative;
+  left: -13%;
+  z-index: 3;
+}
+
+/* line 78, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.fullWidthContainer {
+  width: 100%;
+  min-height: 700px;
+  height: 100%;
+  margin: 0 0 130px 0;
+  text-align: center;
+}
+
+/* line 86, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.posterColumn {
+  width: 33.3%;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  position: relative;
+}
+
+/* line 95, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.posterModule {
+  width: 100%;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  margin: -2px 0;
+  float: left;
+  position: relative;
+}
+
+/* line 105, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.deletePosterButton {
+  color: black;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  width: 25px;
+  padding: 0;
+  text-align: left;
+  opacity: 0.3;
+}
+
+/* line 124, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.deletePosterButton:hover {
+  cursor: pointer;
+  opacity: 1.0;
+}
+
+/* line 129, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.posterModule img {
+  width: 100%;
+  list-style: none;
+  margin: 0 0;
+}
+
+/* line 135, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 88%;
+  padding: 5% 6%;
+  min-height: 170px;
+  background: white;
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+  background-color: rgba(20, 20, 20, 0.88);
+  display: none;
+}
+
+/* line 153, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.active {
+  /*display: inline-block;*/
+}
+
+/* line 157, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.details span {
+  font-size: 16px;
+  line-height: 17px;
+}
+
+/* line 163, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.about {
+  width: 100%;
+  font-size: 25px;
+  clear: both;
+  font-family: 'Oswald', sans-serif;
+  min-height: 700px;
+  text-align: center;
+  color: white;
+  background-color: rgba(30, 30, 30, 0.92);
+  margin: 0;
+  text-align: left;
+  display: none;
+}
+
+/* line 177, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.about p {
+  margin: 20px auto;
+  position: relative;
+  top: 40px;
+  line-height: 32px;
+}
+
+/* line 184, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.about h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 20px auto;
+  position: relative;
+  top: 40px;
+}
+
+/* line 192, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* line 197, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.moduleContainer {
+  background-color: #333333;
+  height: 250px;
+  width: 100%;
+  margin: 30px 0 0 0;
+  border: 1px solid #333333;
+  position: relative;
+  clear: both;
+}
+
+/* line 207, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.moduleContainer .module {
+  height: 70%;
+  width: 26%;
+  margin: 30px 3% 0 3%;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* line 218, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.module h3 {
+  color: white;
+  font-size: 23px;
+  position: relative;
+  left: 30px;
+  display: inline-block;
+  width: 80%;
+}
+
+/* line 227, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.module ul {
+  position: relative;
+  left: 30px;
+  top: 15px;
+  color: white;
+}
+
+/* line 234, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.module ul li {
+  line-height: 30px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+/* line 240, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.backToTheTop {
+  background-color: #4E4D4D;
+  font-size: 19px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+
+/* line 256, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.footer {
+  background-color: #1F1F1F;
+  margin: 0 0 0 0;
+  color: #B3B3B3;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size: 23px;
+  line-height: 60px;
+  clear: both;
+}
+
+/* line 271, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/style.css.scss */
+.tempMessage {
+  font-size: 30px;
+  text-align: center;
+  padding: 50px 0 0 0;
+}
+/* line 5, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.signInField label {
+  width: 120px;
+  text-align: right;
+  display: inline-block;
+}
+
+/* line 11, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.addNewPoster {
+  color: red;
+  height: 150px;
+  width: 150px;
+  font-size: 22px;
+  line-height: 150px;
+  border-radius: 50%;
+  border: 3px solid red;
+  clear: both;
+  position: relative;
+  top: 50px;
+  margin: 40px auto;
+}
+
+/* line 25, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.addNewPoster:hover {
+  cursor: pointer;
+}
+
+/* line 30, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.newPoster {
+  width: 450px;
+  min-height: 360px;
+  max-height: 400px;
+  text-align: center;
+  border: 1px solid grey;
+  padding: 40px 0 20px 0;
+  margin: 30px auto;
+  clear: both;
+  position: relative;
+  top: 50px;
+  display: none;
+  border-radius: 7px;
+}
+
+/* line 45, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.newPosterLine {
+  min-height: 40px;
+  width: 100%;
+  position: relative;
+  text-align: left;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+/* line 54, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.newPosterLine label {
+  width: 25%;
+  text-align: right;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  font-size: 22px;
+  margin-left: 30px;
+  vertical-align: top;
+}
+
+/* line 65, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.newPosterInput {
+  height: 28px;
+  font-size: 20px;
+  width: 50%;
+  margin-left: 15px;
+}
+
+/* line 72, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.newField {
+  height: 120px;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+/* line 78, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.newPosterLine .button {
+  width: 120px;
+  height: 33px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  background-color: red;
+  border-radius: 6px;
+  font-family: 'Oswald', sans-serif;
+  margin: 0 auto;
+}
+
+/* line 93, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.signUpContainer {
+  width: 100%;
+  min-height: 600px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: url(/assets/wspcs-9cce4f63808eeeba5c56e9f912b945ed16a1c89da4d81a6549ff93d21ebfb39f.jpg);
+  background-size: cover;
+  opacity: 0.95;
+  z-index: -1;
+}
+
+/* line 105, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.signButton {
+  height: 32px;
+  background-color: teal;
+  border-radius: 5px;
+  width: 120px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+/* line 122, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.updateHeader {
+  margin: 35px 0;
+  font-size: 28px;
+}
+
+/* line 127, /Users/Addison/GA/w12/FlatFile/app/assets/stylesheets/users.scss */
+.updateInput {
+  height: 30px;
+  width: 10%;
+  min-width: 230px;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 0 5px 0 5px;
+  border: 1px solid grey;
+  margin-left: 5px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
